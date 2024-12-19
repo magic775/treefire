@@ -1,0 +1,240 @@
+/** general style  */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none
+}
+
+::-webkit-scrollbar{width: 0}
+
+:root{
+  --transparent:transparent;
+  --color:white
+}
+
+/** start of style */
+
+body{
+  background-image:url(../Governorates/photo/Home/IMG_4773.JPG);
+  display:flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  font-family:oswald
+}
+
+form{
+  background-color:white;
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  border: solid rgba(255, 255, 255, 0.432) 1px;
+  width: 50%;
+  height: 100%
+}
+
+form a img{
+  height: 150px;
+  width: 150px;
+  margin: 15px auto;
+  display: block;
+  border-radius: 50%;
+  animation-name: up;
+  animation-duration: 1s;
+  animation-iteration-count: infinite
+}
+
+form a img:hover{
+  box-shadow: 0 0 20px rgb(245, 219, 202),
+              0 0 40px rgb(245, 219, 202),
+              0 0 60px rgb(245, 219, 202)
+}
+
+form{
+  background-color:var(--transparent);
+  color:var(--color);
+  backdrop-filter: blur(50px)
+}
+
+form .bigDiv{
+  display: flex;
+  width: 100%;
+  margin: 0px 10px;  
+  flex-direction: row;
+  align-content: center
+}
+
+form .smallDiv{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0px 10px
+}
+
+form .input{
+  display: flex;   
+  flex-direction: row;
+  font-weight:bold;
+  font-size: large
+  
+}
+
+form .input input{
+  color:var(--color); 
+  padding:0 3%; 
+  text-transform: capitalize
+}
+
+form input[type="radio"]{
+  width:10%;
+  height: 50%;
+  margin:6px 0
+}
+
+form input[type="radio"]:last-of-type{margin-left: auto}
+
+form .input input[value="female"]:hover::after{
+  content: url(../Governorates/code/New-folder/photos/form/sign-up/image2.png);
+  position: absolute;
+  top: 43%;
+  left: 51%
+}
+
+form .input input[value="male"]:hover::after{
+  content: url(../Governorates/code/New-folder/photos/form/sign-up/image_2024-12-04_23-05-47.png);
+  position: absolute;
+  top: 43%;
+  left: 24%
+}
+
+form label{margin: 1% 3% 1% 1%;}
+
+form input,select{
+  width: 60%;
+  background-color:var(--transparent);
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.651);
+  color:var(--color)
+}
+
+option{
+  color:black;
+  background-color:rgba(252, 246, 228, 0.984);
+  font-size:14px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase
+}
+
+form input[type="checkbox"]{
+  width: fit-content;
+  height: 13px;
+  margin:10px 10px
+}
+
+form > div:last-of-type{text-align: center}
+
+form .last{
+  width: fit-content;
+  margin: 0 auto;
+  color: var(--color);
+  text-decoration: none;
+  position: relative
+}
+
+form:hover .last:hover::after{
+  content: url(../Governorates/code/New-folder/photos/form/sign-up/image3.png);
+  position: absolute;
+  top: -300%;
+  left: 200%
+}
+
+form button{
+  margin: 10px auto 2px;
+  background-color: transparent;
+  color: var(--color);
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 10px;
+  width: 400px;
+  height: 40px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(236, 138, 207, 0.295);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1)
+}
+
+.button::before{
+  content: "send";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(135deg,rgb(238, 182, 187,.9),rgba(35, 39, 88, 0.8));
+  transform: translate(0%,90%);
+  z-index: 99;
+  position: relative;
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1)
+  }
+
+.button::after{
+  content: "sign up";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(21, 25, 83, 0.404);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transform-origin: top;
+  transform: translate(0%,-100%);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1)
+}
+
+.button:hover::before{transform: translate(0%,0%)}
+
+.button:hover::after{transform: translate(0%,-200%)}
+
+.button:focus{outline: none}
+
+.button:active{scale: 0.95}
+
+form a:last-child:hover::after{
+  content: url(image3.png);
+  position: absolute;
+  top: -15px;
+  right: 130px
+}
+
+/** animations */
+
+@keyframes up{
+  0% {transform: translateY(0)}
+  50% {transform: translateY(-10px)}
+  100% {transform: translateY(0)}
+}
+
+/** media query */
+
+@media only screen and (max-width: 1050px){
+
+form{width: 100%; margin: 10% 0}
+
+form .bigDiv{margin: 0 -10px}
+
+form label{margin: 0 20px}
+
+form input[type="radio"]{margin:6px 10px}
+
+form input[type="checkbox"]{width: fit-content; margin: 0}
+
+form input,select{width: 55%; margin-left: -10px; display: flex}
+
+form > div:last-of-type{width: 100%; display: inline}
+}

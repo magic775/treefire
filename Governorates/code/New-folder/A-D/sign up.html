@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سجل</title>
+    <link rel="shortcut icon" href="../../../photo/Home/icons/photo_2024-12-12_02-52-32.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../../../../CSS/dark/sign up.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mada:wght@200..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <style>
+        .bigDiv label{margin-left: 30px}
+
+        form .button::after{content: 'سجل '; font-size:25px}
+
+        form .button::before{content: 'ارسل'; font-size:25px}
+
+        form input[type="radio"]:last-of-type{margin-right: auto}
+
+        form .input input[value="female"]:hover::after{
+            content: url(../photos/form/sign-up/image2.png);
+            position: absolute;
+            top: 43%;
+            right: 51%
+        }
+
+        form .input input[value="male"]:hover::after{
+            content: url(../photos/form/sign-up/image_2024-12-04_23-05-47.png);
+            position: absolute;
+            top: 43%;
+            right: 24%
+        }
+
+        form:hover .last:hover::after{
+            content: url(../photos/form/sign-up/image3.png);
+            position: absolute;
+            top: -290%;
+            right: 290%
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <a href="../../Home/indexA - Copy.html.html">
+            <img src="../../../photo/Home/icons/photo_2024-12-12_02-52-32.jpg" alt="header">
+        </a>
+        <br>
+        <div class="bigDiv">
+            <div class="smallDiv">
+                <div class="input">
+                    <label for="name">الاسم:</label>
+                    <input type="text" required>
+                </div>
+                <br>
+                <div class="input">
+                    <label for="email" style="margin-left: 15px;">البريد الإلكتروني:</label>
+                    <input type="email" required>
+                </div>
+                <br>
+                <div class="input">
+                    <label for="countries">البلد:</label>
+                    <select  class="co" name="countries" required>
+                        <option value="" selected="true"></option>
+                        <option value="Egypt">مصر</option>
+                        <option value="SaudiArabia">المملكة العربية السعودية</option>
+                        <option value="Turkey ">تركيا </option>
+                        <option value="USA">الولايات المتحدة الأمريكية</option>
+                        <option value="England">إنجلترا</option>
+                        <option value="France ">فرنسا </option>
+                        <option value="Spain ">اسبانيا </option>
+                        <option value="Germany ">ألمانيا </option>
+                        <option value="Italy">ايطاليا </option>
+                        <option value="Japan ">اليابان </option>
+                        <option value="China  ">الصين  </option>
+                        <option value="India  ">الهند  </option>
+                        <option value="South Korea ">كوريا الجنوبية </option>
+                        <option value="Russia  ">روسيا  </option>
+                    </select>
+                </div>
+                <br>
+                <div class="input">
+                    <label for="Gender"> الجنس </label>
+                    <input type="radio" name="Gender" value="male" required> ذكر
+                    <input type="radio" style="margin-left: 0;" name="Gender" value="female" required> أنثى
+                </div>
+            </div>
+            <div class="smallDiv">
+                <div class="input">
+                    <label for="age">العمر:</label>
+                    <input type="number" required>
+                </div>
+                <br>
+                <div class="input">
+                    <label for="phone">رقم الهاتف :</label>
+                    <input type="tel" required>
+                </div>
+                <br>
+                <div class="input">
+                    <label for="cities">المحافظة:</label>
+                    <select name="cities" required>
+                        <option value="" selected="true"></option>
+                        <option value="cairo">القاهرة</option>
+                        <option value="alex">الإسكندرية</option>
+                        <option value="Ismailia">الإسماعيلية</option>
+                        <option value=" Aswan">أسوان</option>
+                        <option value="Assiut">أسيوط</option>
+                        <option value=" Beni Suef"> بني سويف</option>
+                        <option value="	Red Sea">	البحر الأحمر</option>
+                        <option value=" Beheira"> البحيرة</option>
+                        <option value=" Dakahlia"> الدقهلية</option>
+                        <option value=" Damietta"> دمياط</option>
+                        <option value="  Faiyum">  الفيوم</option>
+                        <option value=" Gharbia"> الغربية</option>
+                        <option value=" Giza"> الجيزة</option>
+                        <option value=" Kafr El Sheikh"> كفر الشيخ</option>
+                        <option value=" Luxor">الأقصر</option>
+                        <option value=" Matrouh"> مرسى مطروح</option>
+                        <option value="  Monufia"> المنوفية</option>
+                        <option value=" Minya"> المنيا</option>
+                        <option value=" El Wadi El Gedid"> الوادي الجديد</option>
+                        <option value=" North Sinai"> شمال سيناء</option>
+                        <option value=" Port Said"> بورسعيد</option>
+                        <option value=" Qalyubia"> القليوبية</option>
+                        <option value=" Qena"> قنا</option>
+                        <option value=" Sohag"> سوهاج</option>
+                        <option value=" South Sinai"> جنوب سيناء</option>
+                        <option value=" Suez"> السويس</option>
+                        <option value="  Sharqia">  الشرقية</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="bigDiv center" style="flex-direction: column;">
+            <div class="input" >
+                <label for="username">اسم المستخدم:</label>
+                <input type="text" required>
+            </div>
+            <br>
+            <div class="input">
+                <label for="password">كلمة المرور:</label>
+                <input type="password" required>
+            </div>
+            <br>
+            <div class="input">
+                <label for="password">تأكيد كلمة المرور:</label>
+                <input type="password" required>
+            </div>
+        </div>
+        <br>
+        <div>
+            <input type="checkbox" style="display: inline;" required>
+            <label for="agreement" >أوافق على سياسة الخدمة </label>
+        </div>
+        <button class="button"></button> 
+        <br>
+        <a href="#" class="last" style="margin-bottom: 10px;">لدي حساب بالفعل</a>
+    </form>
+</body>
+</html>

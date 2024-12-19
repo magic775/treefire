@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+article{
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: antiquewhite;
+    background: linear-gradient(140deg,#f7c89ce6,rgba(255, 233, 201, 0.966),#faf8f1);
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #979797
+}
+
+article .image{
+    width: 350px;
+    height: 350px;
+    border-radius: 50px;
+    background-size: cover;
+    box-shadow:0px 9px 5px  #1d1002
+}
+
+article div{
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 350px);
+    position: relative
+}
+
+article div p:nth-child(1){
+    margin-left: 30px; 
+    font-size: 40px;
+    font-weight: 700;
+    font-style: italic;
+    color: #ffff;
+    text-shadow: 1px 3px 4px rgb(133, 82, 15) 
+}
+
+article div .icons{
+    width: fit-content;
+    height: fit-content;
+    margin: -13px 30px
+}
+
+article div .icons svg{margin-left: 30px}
+
+.star-rating {position: absolute; top: 30px; left: 30px}
+
+.star-rating input {display: none}
+
+.star-rating label {
+    font-size: 3rem;
+    color: #113b28;
+    cursor: pointer;
+    transition: color 0.2s;
+    float: right
+}
+
+.star-rating label:hover,
+.star-rating label:hover~label {color: #ffd700}
+
+.star-rating input:checked~label {color: #ffd700}
+
+article div .content{margin: 50px 0 60px 30px}
+
+article div .container{
+    width: fit-content;
+    position: absolute;
+    bottom: 0;
+    right: 20px
+}
+
+article div .content{ 
+    width: 70%;
+    color: #590707;
+    font-size: 20px
+}
+
+article div .container a{
+    margin-left: 40px;
+    padding: 5px;
+    box-shadow: 0 0 4px #113b28 inset;
+    border-radius: 20%
+}
+
+article div .container a:hover{box-shadow: 0 0 4px #113b28}
+
+@media only screen and (max-width: 1050px){
+
+article{display: block}
+
+article div{width: 100%}
+
+.star-rating{position: absolute; top: 15px; left: 20px}
+
+article div .content{margin-top: 40px}
+
+article div .container{right: 50px}
+
+article div .container a{margin-left: 25px}
+}
+
+@media only screen and (max-width: 768px){
+
+article .image{width: 95%; height: 300px}
+
+article div{width: fit-content}
+
+.star-rating {position: absolute; top: 75px; left: 20px}
+
+article div .content{margin-top: 40px}
+
+article div .container{right: 50px}
+
+article div .container a{margin-left: 25px}
+}

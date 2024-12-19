@@ -1,0 +1,166 @@
+/** general style */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none
+}
+
+:root{
+  --color:white;
+  --transparent:--transparent
+}
+
+/** start of style */
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(../../Governorates/photo/Home/IMG_4773.JPG);
+  background-size: cover;
+  font-family: oswald;
+  background-repeat: no-repeat;
+  background-position: center
+}
+
+form a img{display: none}
+
+form:hover a img{
+  height: 150px;
+  width: 150px;
+  margin: 15px auto;
+  display: block;
+  border-radius: 50%;
+  animation-name: up;
+  animation-duration: 1s;
+  animation-iteration-count: infinite
+}
+
+form:hover a img:hover{
+  box-shadow: 0 0 20px #16263b,
+              0 0 40px #16263b,
+              0 0 60px #16263b
+}
+
+form:hover{
+  width: 500px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  backdrop-filter: blur(50px);
+  background-color: #010a18;
+  box-shadow: 10px rgb(0, 0, 0,.2);
+  padding: 30px 40px
+}
+
+form:hover div{ 
+  width: 100%;
+  height: 45px;
+  margin: 40px 0;
+  display: flex;
+  justify-content: center
+}
+
+form:hover div input{
+  width: 70%;
+  height: 90%;
+  padding: 20px;
+  background-color:#011127  ;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.726);
+  border-radius: 40px;
+  color: var(--color);
+  padding-left: 25px;
+  text-transform: capitalize
+}
+
+form:hover div input::placeholder{color: var(--color)}
+
+form:hover a:last-of-type{
+  display: flex;
+  justify-content: center;
+  margin: -10px 0 15px ;
+  color: var(--color)
+}
+
+form:hover a:last-of-type{
+  width: fit-content;
+  margin: 20px auto;
+  text-decoration: none;
+  color: var(--color);
+  position: relative
+}
+
+form:hover a:last-of-type:hover::after{
+  content: url(../../Governorates/code/New-folder/photos/form/log-in/image.png);
+  position: absolute;
+  top: -300%;
+  left: 120%
+}
+
+form:hover span{display: flex; justify-content: center}
+
+form:hover button{
+  background-color: transparent;
+  color: #e8e8e8;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 10px;
+  width: 340px;
+  height: 40px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(231, 136, 195, 0.342);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  text-align: center
+}
+
+form:hover button::before{
+  content: "send";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(135deg,rgb(238, 182, 187,.9),rgba(35, 39, 88, 0.8) );
+  transform: translate(0%,90%);
+  z-index: 99;
+  position: relative;
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1)
+}
+
+form:hover button::after{
+  content: "log in";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(29, 39, 78, 0.603);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transform-origin: top;
+  transform: translate(0%,-100%);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1)
+}
+
+form:hover button:hover::before{transform: translate(0%,0%)}
+
+form:hover button:hover::after{transform: translate(0%,-200%)}
+
+form:hover button:focus{outline: none}
+
+form:hover button:active{scale: 0.95}
+
+/** animations */
+
+@keyframes up{
+  0% {transform: translateY(0)}
+  50% {transform: translateY(-10px)}
+  100% {transform: translateY(0)}
+}

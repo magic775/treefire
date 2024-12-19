@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 7px;
+    box-sizing: border-box
+}
+
+:root{ color: white}
+
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+::selection{ background-color: white; color: #010a18}
+
+body{background-color: #011127}
+
+/** start style of nav */
+
+nav{
+    width: 100%;
+    height: 10%;
+    padding-top: 18px;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter:blur(3px) ;
+    border-radius: 30px;
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    user-select: none;
+    z-index: 1
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+nav label a img{
+    width: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+}
+
+nav ul li{
+    width: fit-content;
+    display: inline;
+    margin-left: 50px;
+}
+
+nav ul li:first-child{
+    margin-left: 80px;
+}
+
+.light{
+    color: rgb(96, 49, 19);
+    background-color: transparent;
+    position: absolute;
+    top: 15px;
+    right: 220px;
+}
+
+.light:hover{
+    color: rgb(255, 117, 5);
+}
+
+body svg{
+    height: 40px;
+}
+
+.language{
+    color: rgb(96, 49, 19);
+    position: absolute;
+    top: 18px;
+    right: 35px;
+}
+
+body div a,
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 3px 3px 3px #16263b;
+    font-weight: bold;
+    padding: 3px 4px;
+    border-radius: 4px;
+    }
+
+body div a,
+nav ul li a:hover{
+    color: #16263b;
+    text-shadow: 3px 3px 3px #16263b;
+}
+
+body .dnav{
+    padding: 3px 0 0 5px;
+    display: inline-block;
+    background-color: #011127 ;
+    border-radius: 50px;
+    position: fixed;
+    right: 90px;
+    top: 30px;
+    z-index: 999999;
+}
+
+body div a:first-child{
+    color: #5b3005;
+    border-radius: 50px 0 0 50px;
+    background-color: transparent;
+    text-shadow: 0 1px 3px #5b3005;
+}
+
+body div a:last-child:not(section article div a){
+    background-color: #5b3005;
+    border-radius: 150px 50px 50px 0;
+    text-shadow: 0 1px 3px #16263b;
+}
+
+/** end style of nav */
+
+/* style of  start page  */
+
+.start{text-align: center; margin-bottom: 20px}
+
+.page{
+    border-radius:60%;
+    width: 100%;
+    height: 400px;
+    border: 2px solid #ffffff
+}
+
+/* style of frist company */
+
+.company{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #010a18;
+    border-radius:40px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 7px #16263b;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    display: flex
+}
+
+/* style of the fixed tags in the div of companies */
+
+.img-1,.img-2,.img-3,.img-4,.img-5{
+    background-size:cover;
+    border-radius:40px;
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    right: 5%;
+    top: -30px
+}
+
+
+.img-1{background-image: url(../../Governorates/photo/companies/Aircairo/frist\ pic\ .png)}
+
+.img-2{background-image: url(../../Governorates/photo/companies/EgyptAir/first\ pic.gif)}
+
+.img-3{background-image: url(../../Governorates/photo/companies/Corsini/frist\ pic\ .jpg)}
+
+.img-4{background-image: url(../../Governorates/photo/companies/Sailing/frist\ pic.jpg)}
+
+.img-5{background-image: url(../../Governorates/photo/companies/Swift/frist\ pic.jpg)}
+
+h2{
+    display: inline;
+    text-transform: capitalize;
+    margin-left: 20px; 
+    font-size: 50px;
+    color:var(--color)
+}
+
+p{
+    border-radius:10px;
+    padding: 10px;
+    color:var(--color);
+    font-size: 25px;
+    margin-top: 180px
+}
+
+.button{margin: 0 auto}
+
+button{
+    background-color: #011127;
+    color:var(--color) ;
+    border-radius: 7px;
+    border: none;
+    height: 40px;
+    width: 150px;
+    font-size: 15px ;
+    box-shadow: 4px 4px 4px 1px #16263b
+}
+
+button:active{
+    box-shadow: .2em .2em .2em rgb(233, 250, 240);
+    transform: translate(.1em,.1em)
+}
+
+/* style    of div of stars and icons */
+
+.icons{
+    display: flex;
+    margin-left: 20px;
+    width: 100%;
+    position: absolute; 
+    top: 10%
+}
+
+/* style of starts */ 
+
+.fa{font-size: 3rem; color: darkgrey}
+
+.checked{color: rgb(250, 183, 74)}
+
+.stars{display: flex; margin-top: 50px}
+
+
+/* style of icon */
+
+.heart{display: flex; margin-top: 50px}
+

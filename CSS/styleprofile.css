@@ -1,0 +1,387 @@
+:root {
+    --background-color: #fcefe1;
+    --text-color-primary:  #590707;
+    --text-color-secondary: #666;
+    --border-color: #f0d2a6;
+    --box-background: #fcecd5;
+    --box-shadow: 0 1px 9px rgba(196, 169, 113, 0.959);
+    --border-radius: 15px;
+    --gap: 20px;
+    --padding: 20px;
+    --image-size: 100%
+}
+
+/* بداية التنسيق الأساسي */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color)
+}
+
+/** start style of nav */
+
+nav{
+    width: 100%;
+    height: 10%;
+    padding: var(--padding);
+    padding-top: 23px;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter:blur(3px) ;
+    border-radius: 30px;
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    user-select: none;
+    z-index: 1
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+nav label a img{
+    width: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+}
+
+nav ul li{
+    width: fit-content;
+    display: inline;
+    margin-left: 50px;
+}
+
+nav ul li:first-child{
+    margin-left: 80px;
+}
+
+.light{
+    color: rgb(96, 49, 19);
+    background-color: transparent;
+    position: absolute;
+    top: 15px;
+    right: 220px;
+}
+
+.light:hover{
+    color: white;
+}
+
+body svg{
+    height: 30px;
+}
+
+.language{
+    color: rgb(96, 49, 19);
+    position: absolute;
+    top: 18px;
+    right: 35px;
+}
+
+body div a,
+nav ul li a{
+    text-decoration: none;
+    color:rgb(96, 49, 19);
+    text-shadow: 3px 3px 3px rgb(245, 219, 202);
+    font-weight: bold;
+    padding: 3px 4px;
+    border-radius: 4px;
+    }
+
+body div a,
+nav ul li a:hover{
+    color: rgb(245, 219, 202);
+    text-shadow: 3px 3px 3px rgb(96, 49, 19);
+}
+
+
+body .dnav{
+    padding: 3px 0 0 5px;
+    display: inline-block;
+    background-color: rgb(243,221, 188) ;
+    border-radius: 50px;
+    position: fixed;
+    right: 90px;
+    top: 20px;
+    z-index: 999999;
+}
+
+body div a:first-child{
+    color: var(--color);
+    border-radius: 50px 0 0 50px;
+    background-color: transparent;
+    text-shadow: 0 1px 3px #5b3005;
+}
+
+body div a:last-child{
+    background-color: #5b3005;
+    border-radius: 150px 50px 50px 0;
+    text-shadow: 0 1px 3px rgb(243,221, 188);
+}
+
+/** end style of nav */
+
+.header .cover-photo {
+    width: var(--image-size);
+    height: 250px;
+    overflow: hidden
+}
+
+.header .cover-photo img {
+    width: var(--image-size);
+    height: var(--image-size);
+    object-fit: cover
+}
+/* نهاية التنسيق الأساسي */
+
+/* بداية تصميم الحاوية الرئيسية */
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: var(--padding);
+    margin-top: 160px
+}
+/* نهاية تصميم الحاوية الرئيسية */
+
+/* بداية تصميم قسم المعلومات الشخصية */
+section:first-of-type {display: flex; position: relative}
+
+section:first-of-type > div:first-child img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    border: px solid var(--border-color);
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    box-shadow:0 0 5px #2e1606
+}
+
+section:first-of-type > div:last-child {
+    text-align: left;
+    position: absolute;
+    left: 220px;
+    bottom: 10px;
+    margin-left: 30px;
+    margin-top: -100px
+}
+
+section:first-of-type > div:last-child  h2 {
+    font-size: 22px;
+    font-weight: 800;
+    background: linear-gradient( var(--text-color-primary) 50%, rgb(190, 152, 146));
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 10px
+}
+
+section:first-of-type > div:last-child  p {
+    font-size: 23px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:600;
+    font-style: italic;
+    line-height: 30px;
+    color: var(--text-color-primary)
+}
+/* نهاية تصميم قسم المعلومات الشخصية */
+
+/* بداية تصميم أقسام المحتوى */
+section:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--gap);
+    padding: var(--padding)
+}
+
+section:nth-child(2) > div{
+    background: var(--box-background);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    box-shadow: var(--box-shadow);
+    backdrop-filter: blur(10px)
+}
+
+.box-left1,.box-right2 {grid-column: span 4}
+
+.box-left2,.box-right1 {grid-column: span 2}
+
+.box-left3,.box-right3 {grid-column: span 3}
+
+section:nth-child(2) > div h2 {
+    font-size: 22px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: var(--text-color-primary);
+    text-align: left;
+    margin-bottom: 10px
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px
+}
+
+.image-item {
+    position: relative;
+    width: calc(100vh / 5);
+    height: calc(100vh / 5);
+    gap: var(--gap);
+    box-shadow: 0 0 3px  #20170f;
+    border-radius: var(--border-radius)
+}
+
+.box-right1 .image-item {
+    height:  calc(100vh / 7);
+    width:  calc(100vh / 7);
+    border-radius: 50%
+}
+
+.box-right1 .image-item img {
+    width: var(--image-size);
+    height: var(--image-size);
+    object-fit: cover;
+    border-radius: 50%
+}
+
+.box-right1 .image-container {gap: 20px}
+
+.box-left1 .image-container,
+.box-right2 .image-container {column-gap: 30px}
+
+.image-item img {
+    width: var(--image-size);
+    height: var(--image-size);
+    object-fit: cover;
+    border-radius: var(--border-radius)
+}
+
+.box-left3 .image-item img,
+.box-right3 .image-item img {
+    width: var(--image-size);
+    height:var(--image-size);
+    object-fit: cover;
+    border-radius: 50%
+}
+
+.box-left3 .image-item,
+.box-right3 .image-item {
+    width:  calc(100vh / 8);
+    height: calc(100vh / 8);
+    margin-left: 10px;
+    border-radius: 50%
+}
+
+.box-left2 .icon-item img {
+    width: calc( 100vh / 15);
+    height: calc( 100vh / 15);
+    object-fit: cover;
+    border-radius: 50%
+}
+
+.box-left2,
+.image-container {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px
+}
+
+.image-container .image-name {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: white;
+    padding: 5px;
+    font-size: 14px
+}
+
+.box-left3 .image-name,
+.box-right3 .image-name {
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    top: 65%;
+    left: 15px;
+    transform: translate(-50% -50%)
+}
+
+.edit-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+
+
+
+/* نهاية تصميم أقسام المحتوى */
+
+@media only screen and (max-width: 768px) {
+
+    section:nth-child(2) {grid-template-columns: 1fr}
+
+    section:nth-child(2) > div{width: 100%; margin-bottom: var(--gap)}
+
+    .box-left1,
+    .box-right2,
+    .box-left2,
+    .box-right1,
+    .box-left3,
+    .box-right3 {grid-column: span 1}
+
+    .profile-info {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center
+    }
+
+    section:first-of-type {text-align: center}
+
+    .image-item {width:100%; height: 250PX}
+
+    .box-left3 .image-name,
+    .box-right3 .image-name {
+        top: 70%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        font-size: 17px
+    }
+
+    section:first-of-type > div:first-child img{
+        height: 165px;
+        width: 165px;
+        bottom: 0px
+    }
+
+    section:first-of-type > div:last-child  p {font-size: 17px}
+    section:first-of-type > div:last-child {left: 170px; bottom: -5px}
+}
